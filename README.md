@@ -1,6 +1,6 @@
 # util ![build status](https://travis-ci.org/ameridata/util.svg?branch=master)
-The util package provides mothods to manipulate strings, implement ternary if
-and other relavant functions. 
+The util package provides methods to manipulate strings, implement ternary operations, 
+generate hashes and other relevant functions. 
 
 ###### Install
 `go get github.com/ameridata/util`
