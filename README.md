@@ -1,4 +1,4 @@
-# util ![build status](https://travis-ci.org/ameridata/util.svg?branch=master)
+# util ![build status](https://github.com/ameridata/util/actions/workflows/go.yml/badge.svg)
 The util package provides methods to manipulate strings, implement ternary operations, 
 generate hashes and other relevant functions. 
 
