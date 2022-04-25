@@ -9,6 +9,7 @@ package hashes
 import (
 	"testing"
 
+	"github.com/ameridata/util/strings"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -33,6 +34,13 @@ func TestEncodeBase64(t *testing.T) {
 }
 
 func TestDecodeBase64(t *testing.T) {
-	data, _ := DecodeBase64("QW1lcmlkYXRh")
-	assert.Equal(t, data, "Ameridata")
+	// Success case
+	dataSuccess, err := DecodeBase64("QW1lcmlkYXRh")
+	assert.Equal(t, dataSuccess, "Ameridata")
+	assert.True(t, err == nil)
+
+	// Fail case
+	dataFail, err := DecodeBase64("Q@W@1@l@c@m@l@k@Y@X@R@h")
+	assert.Equal(t, dataFail, strings.Empty)
+	assert.True(t, err != nil)
 }
