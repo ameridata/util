@@ -1,7 +1,7 @@
-# util ![build status](https://github.com/ameridata/util/actions/workflows/go.yml/badge.svg)
+# util ![build status](https://github.com/ameridata/util/actions/workflows/go.yml/badge.svg) ![codecov.io](https://codecov.io/github/ameridata/util/coverage.svg?branch=master)
 The util package provides methods to manipulate strings, implement ternary operations, 
 generate hashes and other relevant functions. 
-
+  
 ###### Install
 `go get github.com/ameridata/util`
 
