@@ -34,7 +34,7 @@ jobs:
       run: go vet -v ./...
       
     - name: Run coverage
-      run: go test -race -coverprofile=coverage.out -covermode=atomic
+      run: go test -race -coverprofile=coverage.out -covermode=atomic -tags test ./...
       
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v2      
