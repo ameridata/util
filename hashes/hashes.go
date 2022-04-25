@@ -10,7 +10,11 @@ import (
 	"crypto/sha512"
 	"encoding/base64"
 	"encoding/hex"
+	"fmt"
 	"hash"
+
+	"github.com/ameridata/util/conditions"
+	"github.com/ameridata/util/strings"
 )
 
 // It creates a new MD5 hash, then passes it to the stringHasher function along with the text to be hashed
@@ -48,5 +52,6 @@ func EncodeBase64(text string) string {
 // It takes a string, decodes it from base64, and returns the decoded string
 func DecodeBase64(encodedText string) (string, error) {
 	decoded, err := base64.StdEncoding.DecodeString(encodedText)
-	return string(decoded), err
+	decodedText := conditions.IfThenElse(err == nil, string(decoded), strings.Empty)
+	return fmt.Sprintf("%v", decodedText), err
 }
