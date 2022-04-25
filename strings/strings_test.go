@@ -5,6 +5,7 @@
 package strings
 
 import (
+	"strings"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -32,4 +33,10 @@ func TestIsNotBlank(t *testing.T) {
 	assert.False(t, IsNotBlank(""))
 	assert.False(t, IsNotBlank("	"))
 	assert.True(t, IsNotBlank("text"))
+}
+
+func TestEmptyConst(t *testing.T) {
+	assert.True(t, Empty == "")
+	assert.True(t, len(Empty) == 0)
+	assert.True(t, Empty == strings.TrimSpace(Empty))
 }
