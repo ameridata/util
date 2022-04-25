@@ -8,6 +8,8 @@ import (
 	"strings"
 )
 
+const Empty = string("")
+
 // IsEmpty returns true if the text is empty.
 func IsEmpty(text string) bool {
 	return len(text) == 0
