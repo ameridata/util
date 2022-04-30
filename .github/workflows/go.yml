@@ -50,6 +50,7 @@ jobs:
           --failOnCVSS 0
           --enableRetired
           --version
+          --enableExperimental
 
     - name: Upload Dependency Check Test results
       uses: actions/upload-artifact@master
