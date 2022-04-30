@@ -44,7 +44,7 @@ jobs:
       id: Depcheck
       with:
         project: 'util'
-        path: '.'
+        path: './...'
         format: 'HTML'    
         args: >
           --failOnCVSS 0
