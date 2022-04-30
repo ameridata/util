@@ -38,3 +38,6 @@ jobs:
       
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3.1.0    
+
+    - name: Dependency Check
+      uses: dependency-check/Dependency-Check_Action@1.1.0
