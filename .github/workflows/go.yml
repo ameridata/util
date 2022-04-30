@@ -41,3 +41,17 @@ jobs:
 
     - name: Dependency Check
       uses: dependency-check/Dependency-Check_Action@1.1.0
+      id: Depcheck
+      with:
+        project: 'util'
+        path: '.'
+        format: 'HTML'    
+        args: >
+          --failOnCVSS 0
+          --enableRetired
+
+    - name: Upload Dependency Check Test results
+      uses: actions/upload-artifact@master
+      with:
+        name: Depcheck report
+        path: ${{github.workspace}}/reports
