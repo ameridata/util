@@ -58,11 +58,3 @@ jobs:
       with:
         name: Dependency Check report
         path: ${{github.workspace}}/reports
-
-    - name: Run Snyk to check for vulnerabilities      
-      uses: snyk/actions/golang@master
-      continue-on-error: true 
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      with:
-        args: --sarif-file-output=snyk.sarif
