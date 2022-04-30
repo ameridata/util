@@ -59,8 +59,8 @@ jobs:
         name: Dependency Check report
         path: ${{github.workspace}}/reports
 
-    - name: Official FOSSA Action
-      uses: actions/checkout@v3
-      with:
-        api-key: ${{secrets.fossaApiKey}}
-        run-tests: true 
+    - uses: actions/checkout@master
+    - name: Run Snyk to check for vulnerabilities
+      uses: snyk/actions/node@master
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
