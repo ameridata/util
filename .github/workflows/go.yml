@@ -58,3 +58,9 @@ jobs:
       with:
         name: Dependency Check report
         path: ${{github.workspace}}/reports
+
+    - name: Official FOSSA Action
+      uses: fossas/fossa-action@v1.3.1
+      with:
+        api-key: ${{secrets.fossaApiKey}}
+        run-tests: true 
