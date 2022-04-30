@@ -49,6 +49,8 @@ jobs:
         args: >
           --failOnCVSS 0
           --version
+          --log
+          --enableRetired
           --enableExperimental
 
     - name: Upload Dependency Check Test results
